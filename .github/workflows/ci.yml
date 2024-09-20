@@ -1,0 +1,23 @@
+name: Ci Test1
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install project
+        run: npm install
+      - name: run the project build
+        run: npm run build
+      - name: run the project tests
+        run: npm run test
