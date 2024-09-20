@@ -22,7 +22,6 @@ jobs:
         with:
           node-version: '20.x'
       - name: Install project
-        working-directory: ./Week3-CI-Activity
         run: npm install
       - name: run the project build
         run: npm run build
